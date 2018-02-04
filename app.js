@@ -1,7 +1,7 @@
 // Usage example with ExpressJS
 var express = require('express'),
-port = 8080,
-host = '0.0.0.0';
+port = process.env.PORT || 8080/*,
+host = '0.0.0.0'*/;
 
 var app = express();
 app.set('views', __dirname + '/views');
@@ -19,10 +19,11 @@ app.use(express.static(__dirname + ''));
 // });
 
 app.use('/', function(req, res, next){
-  return res.render('index', { myCustomTitle : "ahoj :) - TODO remove" });
+	return res.render('index', { myCustomTitle : "ahoj :) - TODO remove" });
 });
 
 
-app.listen(port, host);
-host = host || 'localhost';
-console.log('application listening on ' + host  + ':' + port);
+var server = app.listen(port, function () {
+    var port = server.address().port;
+    console.log("App now running on port", port);
+});
