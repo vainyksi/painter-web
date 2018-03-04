@@ -13,7 +13,8 @@
   "dependencies": {
     "ejs": "2.5.5",
     "express": "4.10.7",
-    "hbs": "^4.0.1"
+    "hbs": "^4.0.1",
+    "isomorphic-fetch": "^2.2.1"
   },
   "scripts": {
     "start": "node app.js"
