@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <!-- TODO add custom icon -->
+    <title>Malujem.sk</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+</head>
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+    <!--add variables from app.js example-->
+    <h1 style="display: none;">{{myCustomTitle}}</h1>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo">
+            <span class="icon fa-diamond"></span>
+        </div>
+        <div class="content">
+            <div class="inner">
+                <h1>Malujem.sk</h1>
+                <p>Maľovanie, ktoré nás baví</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">O nás</a></li>
+                <li><a href="#work">Referencie</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- About -->
+        <article id="about">
+            <h2 class="major">O nás</h2>
+            <!--TODO change image - ask for real image-->
+            <span class="image main"><img src="images/pic03.jpg" alt=""/></span>
+            <p>
+            <ul style="list-style-type: none">
+                Špecializujeme sa na rýchle a kvalitné maľovanie interiérov:
+                <li>- rodinné domy</li>
+                <li>- byty</li>
+                <li>- kancelárske priestory</li>
+                <li>- hygienické nátery proti plesniam a baktériám</li>
+                <li>- vodou umyvateľné nátery pre priestory s častým znečistením</li>
+            </ul>
+
+            a <b>obnovu - maľovanie fasád rodinných domov</b> hlavne <b>znečistených plesňou</b> s cieľom zabezpečiť čo
+            najdlhšie ošetretrenie fasády pred vznikom plesní a iných vizuálnych zmien fasád.
+            </p>
+            <p>
+                Bez ohľadu na to, čo a kde maľujeme, je to niečo, čo máme radi.
+            </p>
+            <span class="image inline"><img src="images/guaranty.png" alt=""></span>
+            <p>
+                Pred <b>maľovaním</b> pozakrývame nábytok, podlahy a všetko čo by sa mohlo znečistiť. Pri <b>maliarskych
+                    prácach</b> zabezpečujeme aj jednoduché upratovacie práce, ako umývanie podláh, okien a iných
+                znečistených bytových častí. Pomôžeme Vám aj s presťahovaním nábytku. Na všetky nami vykonané
+                práce dávame záruku.
+            </p>
+            <p>
+                Používame silikónové, silikátové, akrylátové, disperzné, práškové a rôzne špeciálne farby a penetračné
+                nátery.
+            </p>
+            <p>Na požiadanie realizujeme: škriabanie, stierkovanie, sieťkovanie s kleberom, akrylovanie, montáž
+                plávajúcich podláh, montáž rohových líšt, izolovanie zatečených flakov, protiplesňové nátery,
+                tapetovanie...</p>
+        </article>
+
+        <!-- Work -->
+        <article id="work">
+            <h2 class="major">Referencie</h2>
+            <!--TODO change images-->
+            <!--<span class="image main"><img src="images/pic02.jpg" alt=""/></span>-->
+
+            {{#each my_images}}
+                <span class="image main"><img src="{{this}}" alt=""/></span>
+            {{/each}}
+        </article>
+
+        <!-- Contact -->
+        <article id="contact">
+            <h2 class="major">Kontakt</h2>
+            <!--TODO implementovat odosielanie emailov-->
+            <form method="post" action="#">
+                <div class="field half first">
+                    <label for="name">Meno</label>
+                    <input type="text" name="name" id="name"/>
+                </div>
+                <div class="field half">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email"/>
+                </div>
+                <div class="field">
+                    <label for="message">Správa</label>
+                    <textarea name="message" id="message" rows="4"
+                              placeholder="máte záujem o aktuálne voľné termíny - napíšte nám odkaz!"></textarea>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Odoslať" class="special"/></li>
+                    <li><input type="reset" value="Vymazať"/></li>
+                </ul>
+            </form>
+            <section>
+                <p>
+                    Ján Korček<br>
+                    malujemrazdva@gmail.com<br>
+                    +421 905 324 037
+                </p>
+            </section>
+            <section>
+                <ul class="icons">
+                    <!--TODO doplnit odkazy na socialne siete-->
+                    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
+            </section>
+
+        </article>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p class="copyright">&copy; malujem.sk.
+            <br>
+            Design:
+            <a href="https://html5up.net">HTML5 UP</a>
+            <a href="https://html5up.net/license">Creative Commons license</a>.</p>
+    </footer>
+
+</div>
+
+<!-- BG -->
+<div id="bg"></div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -5,21 +5,23 @@ host = '0.0.0.0'*/;
 
 var app = express();
 app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+app.set('view engine', 'hbs');
 app.use(express.static(__dirname + ''));
 
-// In your project, this would be require('node-gallery')
-// app.use('/gallery', require('node-gallery')({
-//   staticFiles : 'resources/photos',
-//   urlRoot : 'gallery',
-//   title : 'Example Gallery',
-//   render : false // 
-// }), function(req, res, next){
-//   return res.render('gallery', { galleryHtml : req.html });
-// });
-
 app.use('/', function(req, res, next){
-	return res.render('index', { myCustomTitle : "ahoj :) - TODO remove" });
+
+    var images = ["images/album/1.jpg",
+        "images/album/2.jpg",
+        "images/album/3.jpg",
+        "images/album/4.jpg",
+        "images/album/5.jpg",
+        "images/album/6.jpg",
+        "images/album/7.jpg"];
+
+	return res.render('index', {
+	    myCustomTitle : "ahoj :) - TODO remove",
+        my_images : images
+	});
 });
 
 
