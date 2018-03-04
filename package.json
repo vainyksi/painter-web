@@ -1,9 +1,9 @@
 {
-  "author": "Cian Clarke <cian@cianclarke.com> (http://www.cianclarke.com)",
-  "name": "node-gallery-example",
-  "description": "Node gallery example",
+  "author": "Michal Banik",
+  "name": "malujem.sk-presentation",
+  "description": "malujem.sk presentation",
   "version": "1.0.0",
-  "homepage": "http://www.github.com/cianclarke/node-gallery",
+  "homepage": "https://github.com/vainyksi/painter-web",
   "repository": {
     "url": ""
   },
