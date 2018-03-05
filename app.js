@@ -10,7 +10,8 @@ app.use(express.static(__dirname + ''));
 
 var index = require('./routes/index');
 
-app.use('/', index);
+// TODO change to root - temporary for development
+app.use('/dev', index);
 
 var server = app.listen(port, function () {
     var port = server.address().port;
