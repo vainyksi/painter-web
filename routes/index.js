@@ -1,8 +1,13 @@
 var express = require('express');
 var router = express.Router();
-var dropboxController = require('./dropboxController');
 
 /* GET home page. */
-router.get('/', dropboxController.home);
+router.get('/', function (req, res, next) {
+
+    res.render('index', {
+        myCustomTitle: "ahoj :) - TODO remove",
+    });
+
+});
 
 module.exports = router;
