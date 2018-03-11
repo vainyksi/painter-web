@@ -1295,7 +1295,7 @@
 				}
 
 				#header nav ul li a {
-					display: block;
+					display: inline;
 					min-width: 7.5rem;
 					height: 2.75rem;
 					line-height: 2.75rem;
