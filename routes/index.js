@@ -5,7 +5,9 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
 
     res.render('index', {
-        myCustomTitle: "ahoj :) - TODO remove",
+        twitterLink: "#",
+        facebookLink: "https://facebook.com/malujem.sk/photos/",
+        instagramLink: "#"
     });
 
 });
