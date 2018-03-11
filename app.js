@@ -1,6 +1,7 @@
 // Usage example with ExpressJS
-var express = require('express'),
-port = process.env.PORT || 8080/*,
+var express = require('express');
+
+var port = process.env.PORT || 8080/*,
 host = '0.0.0.0'*/;
 
 var app = express();
@@ -9,9 +10,15 @@ app.set('view engine', 'hbs');
 app.use(express.static(__dirname + ''));
 
 var index = require('./routes/index');
+var emailController = require('./routes/emailController');
 
 // TODO change to root - temporary for development
 app.use('/dev', index);
+
+const bodyParser = require('body-parser');
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+app.post('/send', urlencodedParser, emailController.sendMail);
 
 var server = app.listen(port, function () {
     var port = server.address().port;

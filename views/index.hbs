@@ -16,6 +16,11 @@
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
+    {{#if anchor}}
+        <script>
+            window.location.hash = '#' + '{{anchor}}';
+        </script>
+    {{/if}}
 </head>
 <body>
 
@@ -101,8 +106,7 @@
         <!-- Contact -->
         <article id="contact">
             <h2 class="major">Kontakt</h2>
-            <!--TODO implementovat odosielanie emailov-->
-            <form method="post" action="#">
+            <form method="POST" action="/send">
                 <div class="field half first">
                     <label for="name">Meno</label>
                     <input type="text" name="name" id="name"/>
@@ -138,6 +142,15 @@
                 </ul>
             </section>
 
+        </article>
+
+        <article id="message_sent">
+            <h2 class="major">Správa bola odoslaná</h2>
+            <p>Ďakujeme za správu.</p>
+            <section>
+                <p>{{senderName}} ({{senderMail}})</p>
+                <p>{{mesageSent}}</p>
+            </section>
         </article>
     </div>
 
