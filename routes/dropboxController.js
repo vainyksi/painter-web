@@ -1,12 +1,20 @@
 require('isomorphic-fetch');
 var Dropbox = require('dropbox').Dropbox;
 
+function renderNoImages(res) {
+    res.render('index', {
+        myCustomTitle: "ahoj :) - TODO remove",
+        my_images: []
+    });
+}
+
 module.exports.home = async (req, res, next)=>{
 
     var token = process.env.DPX_TOKEN;
     if (token == undefined) {
         console.error('Missing Dropbox token. Set system variable DPX_TOKEN.');
-        throw new Error("Missing Dropbox token. Set system variable DPX_TOKEN.");
+        renderNoImages(res);
+        // throw new Error("Missing Dropbox token. Set system variable DPX_TOKEN.");
     }
 
     // default images
