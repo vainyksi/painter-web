@@ -39,7 +39,7 @@ async function getLinksAsync(token){
     var dbx = new Dropbox({ accessToken: token });
 
     //List images from the relative path
-    let result = await listImagePathsAsync(dbx, "/album");
+    let result = await listImagePathsAsync(dbx, "");
 
     //Get a temporary link for each of those paths returned
     let temporaryLinkResults= await getTemporaryLinksForPathsAsync(dbx,result.paths);
