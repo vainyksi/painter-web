@@ -45,6 +45,9 @@ module.exports.sendMail = (req, res, next) => {
         anchor: 'message_sent',
         senderName: req.body.name,
         senderMail: req.body.email,
-        mesageSent: req.body.message
+        mesageSent: req.body.message,
+        twitterLink: "#",
+        facebookLink: "https://facebook.com/malujem.sk/photos/",
+        instagramLink: "#"
     });
 };
