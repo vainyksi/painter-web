@@ -17,7 +17,7 @@ app.use('/', index);
 const bodyParser = require('body-parser');
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-app.post('/send', urlencodedParser, emailController.sendMail);
+app.post('/', urlencodedParser, emailController.sendMail);
 
 var server = app.listen(port, function () {
     var port = server.address().port;

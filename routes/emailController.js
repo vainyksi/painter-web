@@ -11,6 +11,8 @@ module.exports.sendMail = (req, res, next) => {
                     to: [
                         {
                             email: 'malujemrazdva@gmail.com', // TODO move to config, send to multiple receivers
+                        },{
+                            email: 'majkyboss@gmail.com', // TODO move to config, send to multiple receivers
                         },
                     ],
                     subject: 'malujem.sk - kontaktny formular',
