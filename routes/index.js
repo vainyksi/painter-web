@@ -8,8 +8,8 @@ router.get('/', function (req, res, next) {
     res.render('index', {
         // TODO move to config (from all modules)
         twitterLink: "#",
-        facebookLink: "https://facebook.com/malujem.sk/photos/",
-        instagramLink: "#"
+        facebookLink: "https://facebook.com/malujem.sk/",
+        instagramLink: "https://www.instagram.com/malujem.sk/"
     });
 
 });
