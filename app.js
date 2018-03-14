@@ -12,8 +12,7 @@ app.use(express.static(__dirname + ''));
 var index = require('./routes/index');
 var emailController = require('./routes/emailController');
 
-// TODO change to root - temporary for development
-app.use('/dev', index);
+app.use('/', index);
 
 const bodyParser = require('body-parser');
 
