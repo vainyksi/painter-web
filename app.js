@@ -11,8 +11,10 @@ app.use(express.static(__dirname + ''));
 
 var index = require('./routes/index');
 var emailController = require('./routes/emailController');
+var indexBackground = require('./routes/indexBackground');
 
 app.use('/', index);
+app.use('/bg', indexBackground);
 
 const bodyParser = require('body-parser');
 
